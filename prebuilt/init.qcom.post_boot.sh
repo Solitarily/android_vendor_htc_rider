@@ -78,9 +78,9 @@ case "$emmc_boot"
 esac
 
 # Post-setup services
-case "$target" in
-    "msm8660")
-        start mpdecision
-        start thermald
-    ;;
-esac
+#case "$target" in
+#    "msm8660")
+#        start mpdecision
+#        start thermald
+#    ;;
+#esac
