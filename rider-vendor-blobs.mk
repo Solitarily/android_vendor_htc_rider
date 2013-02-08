@@ -37,12 +37,10 @@ PRODUCT_COPY_FILES += \
   vendor/htc/rider/proprietary/bin/charging:system/bin/charging \
   vendor/htc/rider/proprietary/bin/htcbatt:system/bin/htcbatt \
   vendor/htc/rider/proprietary/bin/ipd:system/bin/ipd \
-  vendor/htc/rider/proprietary/bin/mpdecision:system/bin/mpdecision \
   vendor/htc/rider/proprietary/bin/netmgrd:system/bin/netmgrd \
   vendor/htc/rider/proprietary/bin/netsharing:system/bin/netsharing \
   vendor/htc/rider/proprietary/bin/qmuxd:system/bin/qmuxd \
   vendor/htc/rider/proprietary/bin/rmt_storage:system/bin/rmt_storage \
-  vendor/htc/rider/proprietary/bin/thermald:system/bin/thermald \
   vendor/htc/rider/proprietary/xbin/wireless_modem:system/xbin/wireless_modem \
   vendor/htc/rider/proprietary/lib/libacdbloader.so:system/lib/libacdbloader.so \
   vendor/htc/rider/proprietary/lib/libacdbmapper.so:system/lib/libacdbmapper.so \
