@@ -29,9 +29,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
   vendor/htc/rider/proprietary/etc/agps_rm:system/etc/agps_rm \
   vendor/htc/rider/proprietary/etc/vpimg:system/etc/vpimg \
-  vendor/htc/rider/proprietary/bin/awb_camera:system/bin/awb_camera \
-  vendor/htc/rider/proprietary/bin/lsc_camera:system/bin/lsc_camera \
-  vendor/htc/rider/proprietary/bin/cam_ins_spmo:system/bin/cam_ins_spmo \
   vendor/htc/rider/proprietary/bin/load-modem.sh:system/bin/load-modem.sh \
   vendor/htc/rider/proprietary/bin/sound8x60:system/bin/sound8x60 \
   vendor/htc/rider/proprietary/bin/charging:system/bin/charging \
