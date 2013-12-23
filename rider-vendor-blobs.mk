@@ -17,9 +17,13 @@
 # Prebuilt libraries that are needed to build open-source libraries
 PRODUCT_COPY_FILES += \
 	vendor/htc/rider/proprietary/app/GooglePinyinIME.apk:system/app/GooglePinyinIME.apk \
-	vendor/htc/rider/proprietary/app/FileManager.apk:system/app/FileManager.apk \
-	vendor/htc/rider/proprietary/lib/libjni_googlepinyinime_5.so:system/lib/libjni_googlepinyinime_5.so \
-	vendor/htc/rider/proprietary/lib/libjni_googlepinyinime_latinime_5.so:system/lib/libjni_googlepinyinime_latinime_5.so
+	vendor/htc/rider/proprietary/app/RootExplorer.apk:system/app/RootExplorer.apk \
+        vendor/htc/rider/proprietary/lib/libgnustl_shared.so:system/lib/libgnustl_shared.so \
+        vendor/htc/rider/proprietary/lib/libhwr.so:system/lib/libhwr.so \
+        vendor/htc/rider/proprietary/lib/libjni_delight.so:system/lib/libjni_delight.so \
+        vendor/htc/rider/proprietary/lib/libjni_googlepinyinime_latinime_5.so:system/lib/libjni_googlepinyinime_latinime_5.so \
+        vendor/htc/rider/proprietary/lib/libjni_hmm_shared_engine.so:system/lib/libjni_hmm_shared_engine.so \
+        vendor/htc/rider/proprietary/lib/libpinyin_data_bundle.so:system/lib/libpinyin_data_bundle.so
 
 PRODUCT_COPY_FILES += \
 	vendor/htc/rider/proprietary/lib/libacdbloader.so:obj/lib/libacdbloader.so \
@@ -29,8 +33,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
   vendor/htc/rider/proprietary/etc/agps_rm:system/etc/agps_rm \
   vendor/htc/rider/proprietary/etc/vpimg:system/etc/vpimg \
-  vendor/htc/rider/proprietary/bin/load-modem.sh:system/bin/load-modem.sh \
-  vendor/htc/rider/proprietary/bin/sound8x60:system/bin/sound8x60 \
   vendor/htc/rider/proprietary/bin/charging:system/bin/charging \
   vendor/htc/rider/proprietary/bin/htcbatt:system/bin/htcbatt \
   vendor/htc/rider/proprietary/bin/ipd:system/bin/ipd \
@@ -38,7 +40,6 @@ PRODUCT_COPY_FILES += \
   vendor/htc/rider/proprietary/bin/netsharing:system/bin/netsharing \
   vendor/htc/rider/proprietary/bin/qmuxd:system/bin/qmuxd \
   vendor/htc/rider/proprietary/bin/rmt_storage:system/bin/rmt_storage \
-  vendor/htc/rider/proprietary/xbin/wireless_modem:system/xbin/wireless_modem \
   vendor/htc/rider/proprietary/lib/libacdbloader.so:system/lib/libacdbloader.so \
   vendor/htc/rider/proprietary/lib/libacdbmapper.so:system/lib/libacdbmapper.so \
   vendor/htc/rider/proprietary/lib/libaudcal.so:system/lib/libaudcal.so \
@@ -46,6 +47,7 @@ PRODUCT_COPY_FILES += \
   vendor/htc/rider/proprietary/lib/libhtc_acoustic.so:system/lib/libhtc_acoustic.so \
   vendor/htc/rider/proprietary/lib/hw/camera.default.so:system/lib/hw/camera.default.so \
   vendor/htc/rider/proprietary/lib/libcameraface.so:system/lib/libcameraface.so \
+  vendor/htc/rider/proprietary/lib/libcamera_client.so:system/lib/libcamera_client.so \
   vendor/htc/rider/proprietary/lib/libcamerapp.so:system/lib/libcamerapp.so \
   vendor/htc/rider/proprietary/lib/libgemini.so:system/lib/libgemini.so \
   vendor/htc/rider/proprietary/lib/libidl.so:system/lib/libidl.so \
@@ -93,26 +95,6 @@ PRODUCT_COPY_FILES += \
   vendor/htc/rider/proprietary/lib/libqdp.so:system/lib/libqdp.so \
   vendor/htc/rider/proprietary/lib/libqmiservices.so:system/lib/libqmiservices.so \
   vendor/htc/rider/proprietary/lib/libqmi.so:system/lib/libqmi.so \
-  vendor/htc/rider/proprietary/vendor/firmware/modem.b00:system/vendor/firmware/modem.b00 \
-  vendor/htc/rider/proprietary/vendor/firmware/modem.b01:system/vendor/firmware/modem.b01 \
-  vendor/htc/rider/proprietary/vendor/firmware/modem.b02:system/vendor/firmware/modem.b02 \
-  vendor/htc/rider/proprietary/vendor/firmware/modem.b03:system/vendor/firmware/modem.b03 \
-  vendor/htc/rider/proprietary/vendor/firmware/modem.b04:system/vendor/firmware/modem.b04 \
-  vendor/htc/rider/proprietary/vendor/firmware/modem.b05:system/vendor/firmware/modem.b05 \
-  vendor/htc/rider/proprietary/vendor/firmware/modem.b06:system/vendor/firmware/modem.b06 \
-  vendor/htc/rider/proprietary/vendor/firmware/modem.b07:system/vendor/firmware/modem.b07 \
-  vendor/htc/rider/proprietary/vendor/firmware/modem.b08:system/vendor/firmware/modem.b08 \
-  vendor/htc/rider/proprietary/vendor/firmware/modem.b09:system/vendor/firmware/modem.b09 \
-  vendor/htc/rider/proprietary/vendor/firmware/modem.mdt:system/vendor/firmware/modem.mdt \
-  vendor/htc/rider/proprietary/vendor/firmware/q6.b00:system/vendor/firmware/q6.b00 \
-  vendor/htc/rider/proprietary/vendor/firmware/q6.b01:system/vendor/firmware/q6.b01 \
-  vendor/htc/rider/proprietary/vendor/firmware/q6.b02:system/vendor/firmware/q6.b02 \
-  vendor/htc/rider/proprietary/vendor/firmware/q6.b03:system/vendor/firmware/q6.b03 \
-  vendor/htc/rider/proprietary/vendor/firmware/q6.b04:system/vendor/firmware/q6.b04 \
-  vendor/htc/rider/proprietary/vendor/firmware/q6.b05:system/vendor/firmware/q6.b05 \
-  vendor/htc/rider/proprietary/vendor/firmware/q6.b06:system/vendor/firmware/q6.b06 \
-  vendor/htc/rider/proprietary/vendor/firmware/q6.b07:system/vendor/firmware/q6.b07 \
-  vendor/htc/rider/proprietary/vendor/firmware/q6.mdt:system/vendor/firmware/q6.mdt \
   vendor/htc/rider/proprietary/lib/hw/sensors.rider.so:system/lib/hw/sensors.rider.so \
   vendor/htc/rider/proprietary/lib/libmllite.so:system/lib/libmllite.so \
   vendor/htc/rider/proprietary/lib/libmlplatform.so:system/lib/libmlplatform.so \
