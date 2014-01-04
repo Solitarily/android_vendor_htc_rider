@@ -32,28 +32,25 @@ TARGET_CPU_ABI2 := armeabi
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_SMP := true
-ARCH_ARM_HAVE_TLS_REGISTER := true
+TARGET_CPU_VARIANT := scorpion
 
 # Flags
-TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
-TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
-COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE -DNO_QCOM_MVS
+COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE
 
-# Scorpion optimizations
-TARGET_USE_SCORPION_BIONIC_OPTIMIZATION := true
-TARGET_USE_SCORPION_PLD_SET := true
-TARGET_SCORPION_BIONIC_PLDOFFS := 6
-TARGET_SCORPION_BIONIC_PLDSIZE := 128
+# FB legacy
+BOARD_EGL_NEEDS_LEGACY_FB := true
 
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
+TARGET_QCOM_MEDIA_VARIANT := legacy
 TARGET_QCOM_DISPLAY_VARIANT := legacy
-TARGET_QCOM_AUDIO_VARIANT := legacy
-BOARD_USES_LEGACY_QCOM := true
 
 # Audio
-COMMON_GLOBAL_CFLAGS += -DHTC_ACOUSTIC_AUDIO
-COMMON_GLOBAL_CFLAGS += -DQCOM_ACDB_ENABLED -DLEGACY_QCOM_VOICE
+COMMON_GLOBAL_CFLAGS += -DHTC_ACOUSTIC_AUDIO -DLEGACY_QCOM_VOICE
+TARGET_QCOM_AUDIO_VARIANT := caf
+BOARD_QCOM_TUNNEL_LPA_ENABLED := false
+BOARD_USES_LEGACY_ALSA_AUDIO := true
+BOARD_QCOM_VOIP_ENABLED := true
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
@@ -62,41 +59,81 @@ BOARD_BLUEDROID_VENDOR_CONF := device/htc/msm8660-common/bluetooth/vnd_msm8660.t
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/msm8660-common/bluetooth/include
 
 # Camera
-CAMERA_USES_SURFACEFLINGER_CLIENT_STUB := true
-COMMON_GLOBAL_CFLAGS += -DICS_CAMERA_BLOB -DNO_UPDATE_PREVIEW
+BOARD_USES_QCOM_LEGACY_CAM_PARAMS := true
+COMMON_GLOBAL_CFLAGS += -DICS_CAMERA_BLOB -DNO_UPDATE_PREVIEW -DQCOM_BSP_CAMERA_ABI_HACK
 BOARD_HAVE_HTC_FFC := true
-BOARD_NEEDS_MEMORYHEAPPMEM := true
 TARGET_DISABLE_ARM_PIE := true
-BOARD_CAMERA_USE_MM_HEAP := true
+BOARD_NEEDS_MEMORYHEAPPMEM := true
+USE_DEVICE_SPECIFIC_CAMERA := true
+BOARD_USES_PMEM_ADSP := true
+
+# QCOM BSP (Board Support Package)
+#TARGET_USES_QCOM_BSP := true
+#COMMON_GLOBAL_CFLAGS += -DQCOM_BSP
 
 # Filesystem
 BOARD_VOLD_MAX_PARTITIONS := 36
-
-# FM Radio
-BOARD_HAVE_FM_RADIO := true
-BOARD_GLOBAL_CFLAGS += -DHAVE_FM_RADIO
 
 # GPS
 BOARD_USES_QCOM_GPS := true
 BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 50000
 
 # Graphics
-COMMON_GLOBAL_CFLAGS += -DQCOM_NO_SECURE_PLAYBACK
+#TARGET_USES_ION := true
+COMMON_GLOBAL_CFLAGS += -DQCOM_NO_SECURE_PLAYBACK -DREFRESH_RATE=60 -DHTC_RGBA_8888_OFFSET
 USE_OPENGL_RENDERER := true
 TARGET_NO_HW_VSYNC := true
+TARGET_DOESNT_USE_FENCE_SYNC := true
+TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
+BOARD_EGL_NEEDS_FNW := true
+TARGET_DISPLAY_INSECURE_MM_HEAP := true
+BOARD_USE_MHEAP_SCREENSHOT := true
+TARGET_ENABLE_AV_ENHANCEMENTS := true
+TARGET_USES_POST_PROCESSING := true
 TARGET_USES_C2D_COMPOSITION := true
-TARGET_USES_PMEM := true
 BOARD_EGL_CFG := device/htc/msm8660-common/configs/egl.cfg
-TARGET_QCOM_HDMI_OUT := true
-TARGET_QCOM_HDMI_RESOLUTION_AUTO := true
+NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 
 # Lights
 # legacy LIBLIGHT naming
-#TARGET_PROVIDES_LIBLIGHT := true
-#TARGET_PROVIDES_LIBLIGHTS := true
+TARGET_PROVIDES_LIBLIGHT := true
+TARGET_PROVIDES_LIBLIGHTS := true
 
-# Webkit
-ENABLE_WEBGL := true
-TARGET_FORCE_CPU_UPLOAD := true
+# Sensors
+COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
 
-TARGET_EXTRA_CFLAGS += $(call cc-option,-mtune=cortex-a9,$(call cc-option,-mtune=cortex-a8)) $(call cc-option,-mcpu=cortex-a9,$(call cc-option,-mcpu=cortex-a8))
+# Hardware tunables
+BOARD_HARDWARE_CLASS := device/htc/msm8660-common/cmhw
+
+# Recovery
+USE_SET_METADATA := false
+
+# SELinux
+BOARD_SEPOLICY_DIRS += \
+    device/htc/msm8660-common/sepolicy
+
+BOARD_SEPOLICY_UNION += \
+    app.te \
+    bluetooth.te \
+    device.te \
+    domain.te \
+    drmserver.te \
+    file_contexts \
+    files \
+    file.te \
+    hci_init.te \
+    healthd.te \
+    init.te \
+    init_shell.te \
+    keystore.te \
+    kickstart.te \
+    mediaserver.te \
+    rild.te \
+    surfaceflinger.te \
+    system.te \
+    ueventd.te \
+    untrusted_app.te \
+    vold.te \
+    wpa.te \
+    wpa_socket.te
+
