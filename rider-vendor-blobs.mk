@@ -22,13 +22,22 @@ PRODUCT_COPY_FILES += \
 	vendor/htc/rider/proprietary/lib/libaudioalsa.so:obj/lib/libaudioalsa.so
 
 PRODUCT_COPY_FILES += \
+  vendor/htc/rider/proprietary/lib/hw/copybit.msm8660.so:system/lib/hw/copybit.msm8660.so \
+  vendor/htc/rider/proprietary/lib/hw/gralloc.msm8660.so:system/lib/hw/gralloc.msm8660.so \
+  vendor/htc/rider/proprietary/lib/hw/hwcomposer.msm8660.so:system/lib/hw/hwcomposer.msm8660.so \
+  vendor/htc/rider/proprietary/lib/libgenlock.so:system/lib/libgenlock.so \
+  vendor/htc/rider/proprietary/lib/libmemalloc.so:system/lib/libmemalloc.so \
+  vendor/htc/rider/proprietary/lib/liboverlay.so:system/lib/liboverlay.so \
+  vendor/htc/rider/proprietary/lib/libqdutils.so:system/lib/libqdutils.so \
   vendor/htc/rider/proprietary/bin/getWiMAXPropDaemond:system/bin/getWiMAXPropDaemond \
   vendor/htc/rider/proprietary/bin/netsharing:system/bin/netsharing \
   vendor/htc/rider/proprietary/bin/load-modem.sh:system/bin/load-modem.sh \
   vendor/htc/rider/proprietary/bin/logcat2:system/bin/logcat2 \
+  vendor/htc/rider/proprietary/bin/hdmid:system/bin/hdmid \
   vendor/htc/rider/proprietary/bin/sequansd:system/bin/sequansd \
   vendor/htc/rider/proprietary/bin/setWiMAXPropDaemond:system/bin/setWiMAXPropDaemond \
   vendor/htc/rider/proprietary/bin/wimax_mtd:system/bin/wimax_mtd \
+  vendor/htc/rider/proprietary/bin/wimax_uart:system/bin/wimax_uart \
   vendor/htc/rider/proprietary/bin/wimaxAddRoute:system/bin/wimaxAddRoute \
   vendor/htc/rider/proprietary/bin/wimaxConfigInterface:system/bin/wimaxConfigInterface \
   vendor/htc/rider/proprietary/bin/wimaxDaemon:system/bin/wimaxDaemon \
@@ -43,6 +52,8 @@ PRODUCT_COPY_FILES += \
   vendor/htc/rider/proprietary/etc/wimax/dhcp/wimaxDhcp.conf:system/etc/wimax/dhcp/wimaxDhcp.conf \
   vendor/htc/rider/proprietary/etc/wimax/sequansd/DefaultTree.xml:system/etc/wimax/sequansd/DefaultTree.xml \
   vendor/htc/rider/proprietary/etc/wimax/sequansd/sequansd_app.xml:system/etc/wimax/sequansd/sequansd_app.xml \
+  vendor/htc/rider/proprietary/etc/init.d/90disable_wimax_log:system/etc/init.d/90disable_wimax_log \
+  vendor/htc/rider/proprietary/etc/permissions/android.hardware.wimax.xml:system/etc/permissions/android.hardware.wimax.xml \
   vendor/htc/rider/proprietary/framework/wimax.jar:system/framework/wimax.jar \
   vendor/htc/rider/proprietary/lib/hw/sensors.rider.so:system/lib/hw/sensors.rider.so \
   vendor/htc/rider/proprietary/lib/libchromatix_imx105_default_video.so:system/lib/libchromatix_imx105_default_video.so \
@@ -100,6 +111,7 @@ PRODUCT_COPY_FILES += \
   vendor/htc/rider/proprietary/bin/charging:system/bin/charging \
   vendor/htc/rider/proprietary/bin/htcbatt:system/bin/htcbatt \
   vendor/htc/rider/proprietary/bin/netmgrd:system/bin/netmgrd \
+  vendor/htc/rider/proprietary/lib/libllvm-arm.so:system/lib/libllvm-arm.so \
   vendor/htc/rider/proprietary/lib/hw/camera.vendor.msm8660.so:system/lib/hw/camera.vendor.msm8660.so \
   vendor/htc/rider/proprietary/lib/libacdbmapper.so:system/lib/libacdbmapper.so \
   vendor/htc/rider/proprietary/lib/libaudcal.so:system/lib/libaudcal.so \
@@ -111,4 +123,8 @@ PRODUCT_COPY_FILES += \
   vendor/htc/rider/proprietary/lib/liboemcamera.so:system/lib/liboemcamera.so \
   vendor/htc/rider/proprietary/lib/libOlaEngine.so:system/lib/libOlaEngine.so \
   vendor/htc/rider/proprietary/lib/libposteffect.so:system/lib/libposteffect.so \
-  vendor/htc/rider/proprietary/lib/libqdp.so:system/lib/libqdp.so
+  vendor/htc/rider/proprietary/lib/libqdp.so:system/lib/libqdp.so \
+  vendor/htc/rider/proprietary/lib/libloc_api-rpc.so:system/lib/libloc_api-rpc.so \
+  vendor/htc/rider/proprietary/lib/libsurfaceflinger_client.so:system/lib/libsurfaceflinger_client.so \
+  vendor/htc/rider/proprietary/app/Camera2.apk:system/app/Camera2.apk \
+  vendor/htc/rider/proprietary/app/Camera2.apk:system/priv-app/Camera2.apk
