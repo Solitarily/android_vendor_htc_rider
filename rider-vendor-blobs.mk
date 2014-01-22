@@ -16,7 +16,7 @@
 
 # Prebuilt libraries that are needed to build open-source libraries
 PRODUCT_COPY_FILES += \
-	vendor/htc/rider/proprietary/lib/hw/camera.vendor.msm8660.so:obj/lib/hw/camera.vendor.msm8660.so \
+	vendor/htc/rider/proprietary/lib/hw/camera.default.so:obj/lib/hw/camera.default.so \
 	vendor/htc/rider/proprietary/lib/libacdbloader.so:obj/lib/libacdbloader.so \
 	vendor/htc/rider/proprietary/lib/libacdbmapper.so:obj/lib/libacdbmapper.so \
 	vendor/htc/rider/proprietary/lib/libaudioalsa.so:obj/lib/libaudioalsa.so
@@ -98,7 +98,7 @@ PRODUCT_COPY_FILES += \
   vendor/htc/rider/proprietary/bin/htcbatt:system/bin/htcbatt \
   vendor/htc/rider/proprietary/bin/netmgrd:system/bin/netmgrd \
   vendor/htc/rider/proprietary/lib/libllvm-arm.so:system/lib/libllvm-arm.so \
-  vendor/htc/rider/proprietary/lib/hw/camera.vendor.msm8660.so:system/lib/hw/camera.vendor.msm8660.so \
+  vendor/htc/rider/proprietary/lib/hw/camera.default.so:system/lib/hw/camera.default.so \
   vendor/htc/rider/proprietary/lib/libacdbmapper.so:system/lib/libacdbmapper.so \
   vendor/htc/rider/proprietary/lib/libaudcal.so:system/lib/libaudcal.so \
   vendor/htc/rider/proprietary/lib/libgemini.so:system/lib/libgemini.so \
