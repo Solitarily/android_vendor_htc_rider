@@ -38,9 +38,6 @@ PRODUCT_COPY_FILES += \
   vendor/htc/rider/proprietary/bin/lsc_camera:system/bin/lsc_camera \
   vendor/htc/rider/proprietary/etc/agps_rm:system/etc/agps_rm \
   vendor/htc/rider/proprietary/etc/vpimg:system/etc/vpimg \
-  vendor/htc/rider/proprietary/lib/libcrypto.s_:system/lib/libcrypto.s_ \
-  vendor/htc/rider/proprietary/lib/libhardware_legacy.s_:system/lib/libhardware_legacy.s_ \
-  vendor/htc/rider/proprietary/lib/libnetutils.s_:system/lib/libnetutils.s_ \
   vendor/htc/rider/proprietary/lib/hw/sensors.rider.so:system/lib/hw/sensors.rider.so \
   vendor/htc/rider/proprietary/lib/libchromatix_imx105_default_video.so:system/lib/libchromatix_imx105_default_video.so \
   vendor/htc/rider/proprietary/lib/libchromatix_imx105_preview.so:system/lib/libchromatix_imx105_preview.so \
@@ -111,6 +108,5 @@ PRODUCT_COPY_FILES += \
   vendor/htc/rider/proprietary/lib/libposteffect.so:system/lib/libposteffect.so \
   vendor/htc/rider/proprietary/lib/libqdp.so:system/lib/libqdp.so \
   vendor/htc/rider/proprietary/lib/libloc_api-rpc.so:system/lib/libloc_api-rpc.so \
-  vendor/htc/rider/proprietary/lib/libsurfaceflinger_client.so:system/lib/libsurfaceflinger_client.so \
-  vendor/htc/rider/proprietary/app/Camera2.apk:system/app/Camera2.apk
+  vendor/htc/rider/proprietary/lib/libsurfaceflinger_client.so:system/lib/libsurfaceflinger_client.so
 
