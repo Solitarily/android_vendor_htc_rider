@@ -21,6 +21,8 @@ PRODUCT_COPY_FILES += \
 	vendor/htc/rider/proprietary/lib/libaudioalsa.so:obj/lib/libaudioalsa.so
 
 PRODUCT_COPY_FILES += \
+  vendor/htc/rider/proprietary/etc/init.d/90disable_wimax_log:system/etc/init.d/90disable_wimax_log \
+  vendor/htc/rider/proprietary/etc/permissions/android.hardware.wimax.xml:system/etc/permissions/android.hardware.wimax.xml \
   vendor/htc/rider/proprietary/etc/agps_rm:system/etc/agps_rm \
   vendor/htc/rider/proprietary/etc/vpimg:system/etc/vpimg \
   vendor/htc/rider/proprietary/bin/charging:system/bin/charging \
@@ -30,6 +32,21 @@ PRODUCT_COPY_FILES += \
   vendor/htc/rider/proprietary/bin/netsharing:system/bin/netsharing \
   vendor/htc/rider/proprietary/bin/qmuxd:system/bin/qmuxd \
   vendor/htc/rider/proprietary/bin/rmt_storage:system/bin/rmt_storage \
+  vendor/htc/rider/proprietary/bin/wimaxAddRoute:system/bin/wimaxAddRoute \
+  vendor/htc/rider/proprietary/bin/wimaxConfigInterface:system/bin/wimaxConfigInterface \
+  vendor/htc/rider/proprietary/bin/wimaxDaemon:system/bin/wimaxDaemon \
+  vendor/htc/rider/proprietary/bin/wimaxDhcpRelease:system/bin/wimaxDhcpRelease \
+  vendor/htc/rider/proprietary/bin/wimaxDhcpRenew:system/bin/wimaxDhcpRenew \
+  vendor/htc/rider/proprietary/bin/wimaxDumpKmsg:system/bin/wimaxDumpKmsg \
+  vendor/htc/rider/proprietary/bin/wimaxDumpLastKmsg:system/bin/wimaxDumpLastKmsg \
+  vendor/htc/rider/proprietary/bin/wimaxDumpLogcat:system/bin/wimaxDumpLogcat \
+  vendor/htc/rider/proprietary/bin/wimaxFactoryReset:system/bin/wimaxFactoryReset \
+  vendor/htc/rider/proprietary/bin/wimax_mtd:system/bin/wimax_mtd \
+  vendor/htc/rider/proprietary/bin/wimax_uart:system/bin/wimax_uart \
+  vendor/htc/rider/proprietary/bin/getWiMAXPropDaemond:system/bin/getWiMAXPropDaemond \
+  vendor/htc/rider/proprietary/bin/setWiMAXPropDaemond:system/bin/setWiMAXPropDaemond \
+  vendor/htc/rider/proprietary/bin/sequansd:system/bin/sequansd \
+  vendor/htc/rider/proprietary/framework/wimax.jar:system/framework/wimax.jar \
   vendor/htc/rider/proprietary/lib/libacdbloader.so:system/lib/libacdbloader.so \
   vendor/htc/rider/proprietary/lib/libacdbmapper.so:system/lib/libacdbmapper.so \
   vendor/htc/rider/proprietary/lib/libaudcal.so:system/lib/libaudcal.so \
