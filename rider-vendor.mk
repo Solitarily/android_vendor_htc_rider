@@ -18,5 +18,3 @@
 DEVICE_PACKAGE_OVERLAYS := vendor/htc/rider/overlay
 
 $(call inherit-product, vendor/htc/rider/rider-vendor-blobs.mk)
-
-$(call inherit-product, vendor/htc/rider/Pinyin-vendor.mk)

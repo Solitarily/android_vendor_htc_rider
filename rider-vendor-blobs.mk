@@ -126,5 +126,4 @@ PRODUCT_COPY_FILES += \
   vendor/htc/rider/proprietary/lib/libqdp.so:system/lib/libqdp.so \
   vendor/htc/rider/proprietary/lib/libloc_api-rpc.so:system/lib/libloc_api-rpc.so \
   vendor/htc/rider/proprietary/lib/libsurfaceflinger_client.so:system/lib/libsurfaceflinger_client.so \
-  vendor/htc/rider/proprietary/app/Camera2.apk:system/app/Camera2.apk \
-  vendor/htc/rider/proprietary/app/Camera2.apk:system/priv-app/Camera2.apk
+  vendor/htc/rider/proprietary/app/Camera2.apk:system/app/Camera2.apk
